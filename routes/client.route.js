@@ -12,7 +12,8 @@ clientsRouter.get("/search",async(req,res)=>{
     })
 //get
 clientsRouter.get("/:userId",async(req,res)=>{
-    const user=req.params.userId
+    const user=req.params.userId;
+    console.log(user);
     try{
     var clients= await clientModel.find({user})
     }catch(err){
